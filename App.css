@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.app {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.filters input,
+.filters select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.task-form input {
+  flex: 1;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters input {
+  flex: 1;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  background: white;
+  padding: 15px;
+  border-radius: 7px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card h3 {
+  margin: 0 0 5px;
+}
+
+.task-card p {
+  margin: 0;
+  color: #666;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.message {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+  .task-form,
+  .filters,
+  .task-card {
+    flex-direction: column;
+  }
+
+  .task-form input,
+  .filters input,
+  .filters select,
+  .task-form button {
+    width: 100%;
+  }
+
+  .task-buttons {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .task-buttons button {
+    flex: 1;
+  }
+}
